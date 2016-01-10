@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>String Demo</title>
+     <script type="text/javascript">
+       var s1 = 'JavaScript 1.8';  // primitive string
+       var s2 = new String("Jquery"); // string object
+/*
+       document.write( "<p/>" + typeof(s1)); // string
+       document.write( "<p/>" + typeof(s2));  // object
+
+       if ( s1 > s2 )  // string compare
+          document.write( "<p/>" + s1);
+       else
+          document.write( "<p/>" + s2);
+       document.write("<p/>"  + s1.length);
+       for(var i = 0; i < s1.length;i ++ )
+          document.write("<p/>" + s1[i]);
+
+       for(var i in s1 )
+          document.write("<p/>" + s1[i]);
+*/
+       document.write("<p/>" + s1.charAt(0));
+       document.write("<p/>" + s1[0]);
+
+       document.write("<p/>" + s1.concat("&",s2));
+
+       document.write("<p/>" + s1.indexOf("S"));
+
+       document.write("<p/>" + s1.replace("S","s"));
+       document.write("<p/>" + s1);  // orginal remains unchanged
+
+       document.write("<p/>" + s1.search("[0-9]"));
+
+       var digits = s1.match(/[a-z]/g);  // reg expression
+       document.write("<p/>" + digits.valueOf());
+
+
+       var names = "10-4-2014".split("-");
+       document.write("<p/>" + names.valueOf());
+
+     </script>
+</head>
+<body>
+
+</body>
+

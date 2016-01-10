@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>JavaScript Course</title>
+     <script type="text/javascript">
+
+      function alertDemo() {
+          alert(new Date() );
+      }
+
+      function confirmDemo(){
+        var result = confirm("Do you really want to delete?");
+        if ( result )
+            alert("Ok");
+        else
+            alert("That's ok");
+      }
+
+      function promptDemo(){
+	     var result = prompt("Enter your name :");
+         if ( result != null)
+             alert("Good Morning " + result);
+         else
+             alert("Sorry! I don't know you!");
+      }
+
+     </script>
+</head>
+<body>
+
+ <input type="button" value="show date" onclick="alertDemo()"/>
+ <p/>
+ <input type="button" value="Delete?" onclick="confirmDemo()"/>
+  <p/>
+ <input type="button" value="What's Your name?" onclick="promptDemo()"/>
+
+</body>
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Show  Date</title>
+     <script type="text/javascript">
+       function show()
+       {
+           // document.write( new Date());
+           var output = document.getElementById("output");
+           output.innerHTML = new Date();
+
+       }
+     </script>
+</head>
+<body>
+   <h2 id="output"> </h2>
+   <input type="button" value="Show Date" onclick="show()" />
+
+</body>
+

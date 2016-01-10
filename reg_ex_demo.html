@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+/*     var p1 = /^[a-z]+/i;
+     var p2 = new RegExp("[0-9]+",'g');
+
+     var found = p1.test("123abc");
+     document.write("<p/>" + found);
+
+     var match;
+     var st  ="JavaScript 1.8 in Chrome 36";
+
+     // get all matches
+
+     while((match = p2.exec(st))!= null)
+     {
+       document.write( "<p/>Found match " +
+               match[0] + " at position : " + match.index);
+     }
+*/
+
+    function validate()
+    {
+        var pc = document.getElementById("pc").value;
+
+        var re = new RegExp("[a-z]{2}\\d{4}","i");
+
+        if ( re.test(pc) )
+           alert("Valid");
+        else
+           alert("Invalid");
+
+    }
+    </script>
+</head>
+
+<body>
+Product Code : <input type="text" id="pc" />
+<input type="button" value='Validate' onclick="validate()"/>
+
+</body>
+</html>

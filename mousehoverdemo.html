@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MouseOver</title>
+    <script type="text/javascript">
+
+     function highlight() {
+        var text = document.getElementById("text");
+        text.style.color='white';
+        text.style.background = 'red';
+     }
+
+     function normal() {
+	    var text = document.getElementById("text");
+	    text.style.color='black';
+	    text.style.background = 'white';
+     }
+    </script>
+</head>
+<body>
+    <h1 id="text" onmouseover="highlight()" onmouseout="normal()">
+      Move mouse on to this area!
+    </h1>
+</body>
+</html>

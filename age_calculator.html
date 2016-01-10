@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        // incomplete - to be completed ...
+        function getNoDays(year,month)
+        {
+            return  31;
+        }
+
+        function validateDate(year, month, day)
+        {
+          if ( month < 1 || month > 12)
+             return false;
+
+          if (day < 1 || day > getNoDays(year,month))
+             return false;
+
+          return true;
+        }
+
+        function calculate() {
+
+            var age = document.getElementById("age").value;
+            var output = document.getElementById("output");
+
+            var parts = age.split(/[-/]/);
+
+            if (parts.length != 3) {
+                output.innerHTML = "Invalid Date. Date must be in DD-MM-YYYY format";
+                return;
+            }
+
+            var valid = validateDate(parts[2],parts[1], parts[0]);
+            if ( !valid)
+            {
+                output.innerHTML = "Invalid Date. Please enter valid date!";
+                return;
+            }
+
+            var dob = new Date(parts[2],
+                               parseInt(parts[1]) - 1,
+                               parts[0]);
+
+            var cd = new Date(); // system date
+
+            var millis = cd - dob;  // get no. of milliseconds
+
+            var days = millis / (24 * 60 * 60 * 1000);
+
+            var years = Math.floor(days / 365);
+
+            output.innerHTML = "Your age in years : " + years;
+
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Age Calculator</h1>
+    Enter your age (DD-MM-YY) :
+    <input type="text" id="age" />
+    <p />
+    <input type="button" onclick="calculate()" value="Calculate Age" />
+    <p />
+    <h2 id="output"></h2>
+
+
+</body>
+</html>

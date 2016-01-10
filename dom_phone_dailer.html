@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Dynamic Buttons</title>
+     <script type="text/javascript">
+       var number;
+
+       window.onload=function()
+       {
+            var btns = document.getElementById("buttons");
+            number = document.getElementById("number");
+            for ( var i = 0; i <10; i++)
+            {
+                var btn = document.createElement("input");
+                btn.type="button";
+                btn.value=i.toString();
+                btn.onclick=showDigit;
+                btns.appendChild(btn);
+           }
+       };
+
+      function showDigit() {
+          number.value += this.value;
+      }
+     </script>
+</head>
+<body>
+  <div id="buttons"></div>
+  <input type="text" id="number" style="text-align:right" />
+</body>
+

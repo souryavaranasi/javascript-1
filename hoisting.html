@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Hoisting</title>
+     <script type="text/javascript">
+
+       x = 100;
+       document.write(x);
+
+       var x;
+
+       function  test()
+       {
+          n = 1000;
+          alert(n);
+          var n;
+       }
+
+     </script>
+</head>
+<body>
+
+   <input type="button" value="Test" onclick="test()" />
+
+</body>
+

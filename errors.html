@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Functions</title>
+     <script type="text/javascript">
+      function calculate() {
+
+        var result  = document.getElementById("result");
+        var txtAmount  = document.getElementById("txtAmount");
+
+        try {
+           var amount = parseInt(txtAmount.value);
+           // alert(amount);
+           if (isNaN(amount))
+              throw "Invalid Number";
+
+           if (amount < 0 )
+              throw "Invalid Amount";
+
+           var discount = amount * 0.15;
+           result.innerHTML = discount;
+         }
+         catch(err) {
+             result.innerHTML = err;
+         }
+         finally {
+            // txtAmount.value = "";
+         }
+      }
+
+     </script>
+</head>
+<body>
+
+Enter amount :
+<input type="text" id="txtAmount" />
+<span id="result"></span>
+<p/>
+<input type="button" value="Calculate" onclick="calculate()" />
+
+
+
+
+</body>
+

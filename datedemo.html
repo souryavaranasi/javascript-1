@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Date Demo</title>
+     <script type="text/javascript">
+       var d1 = new Date();
+       var d2 = new Date(2014,6,26,10,20,30);
+       var d3 = new Date("2014-7-27");  // ISO
+
+       var msg;
+
+       if ( d1.getHours() < 12)
+            msg = "Good Morning";
+       else
+          if ( d1.getHours() < 16)
+             msg = "Good Afternoon";
+          else
+             msg = "Good Evening";
+
+       document.write("<p/>" + msg);
+
+       document.write( "<p/>" + d1.toString());
+       document.write( "<p/>" + d2.toString());
+       document.write( "<p/>" + d3.toString());
+
+       document.write( "<p/>" + d1.getTimezoneOffset());
+
+       document.write( "<p/>" + d1.getUTCHours() + ":" + d1.getUTCMinutes());
+       document.write( "<p/>" + d1.toTimeString());
+       document.write( "<p/>" + d1.toUTCString());
+
+       d2.setYear(2015);
+
+       if ( d1 > d2 )
+           document.write("<p/> d1 > d2");
+       else
+           document.write("<p/> d2 > d1");
+
+     </script>
+</head>
+<body>
+
+</body>
+

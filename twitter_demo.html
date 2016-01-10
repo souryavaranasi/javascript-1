@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tweeter Demo</title>
+
+</head>
+<body>
+<form action="tweet.jsp" method="post">
+Your Tweet :
+<br/>
+<textarea id="tweet" rows="3" cols="80"
+      onkeydown="processKey()">
+</textarea>
+<p/>
+<span id="count"></span>
+
+<p/>
+<input id="btnSubmit" type="submit" value="Post Tweet" />
+
+</form>
+</body>
+
+ <script type="text/javascript">
+
+     var  tweet = document.getElementById("tweet");
+     var  count = document.getElementById("count");
+     var  btn = document.getElementById("btnSubmit");
+
+     function processKey() {
+         var charsCount =  40 - tweet.value.length;
+         if (charsCount >= 0) {
+             count.style.color="black";
+             btn.removeAttribute("disabled");
+         }
+         else
+         {
+             count.style.color="red";
+             btn.setAttribute("disabled","true");
+          }
+
+         count.innerHTML = charsCount;
+     }
+
+
+</script>
+
+
+</html>

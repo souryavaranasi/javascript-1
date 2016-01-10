@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+
+     document.write("<p/>" + location.href +"<p/>");
+     document.write("<p/>Host " + location.host +"<p/>");
+     document.write("<p/>Port " + location.port +"<p/>");
+     document.write("<p/>" + new Date().toString() +"<p/>");
+
+     function newDoc()
+     {
+   //    location.assign("http://www.google.com");
+         location.href="http://www.google.com";
+     }
+
+     function reload()
+	 {
+	    location.reload();
+     }
+
+    </script>
+</head>
+
+<body>
+ <input type="button" onclick="newDoc()" value="Load Google"/>
+ <p/>
+ <input type="button" onclick="reload()" value="Reload page"/>
+</body>
+</html>

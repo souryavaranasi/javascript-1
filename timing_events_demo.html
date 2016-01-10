@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Timer</title>
+    <script type="text/javascript">
+     var time;
+     var clock;
+
+     window.onload = function()  {
+        //alert("started");
+        time = document.getElementById("time");
+        clock = setInterval(showTime,1000);
+     };
+
+     function showTime() {
+       time.innerHTML = new Date().toLocaleTimeString();
+     }
+
+     function stopClock() {
+	   clearInterval(clock);
+     }
+    </script>
+</head>
+
+<body>
+    <a href="javascript:stopClock()">Stop Clock</a>
+    <h1 id="time"></h1>
+
+</body>
+</html>

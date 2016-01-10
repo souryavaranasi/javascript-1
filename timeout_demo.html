@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Timer</title>
+    <script type="text/javascript">
+
+     var t1;
+
+     function start() {
+        t1 = setTimeout(process,5000);
+     };
+
+     function process() {
+       alert("Done");
+
+     }
+
+     function cancel() {
+       clearTimeout(t1);
+       alert("Cancelled");
+     }
+
+    </script>
+</head>
+
+<body>
+    <input type="button" onclick="start()"
+       value="Start" />
+    <input type="button" onclick="cancel()" value="Cancel"/>
+
+
+</body>
+</html>

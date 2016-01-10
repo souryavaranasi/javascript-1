@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Type Conversion</title>
+     <script type="text/javascript">
+
+     function showNodays() {
+
+        var month = Number(document.getElementById("month").value);
+        var year =  Number(document.getElementById("year").value) ;
+
+        var nodays;
+
+        switch(month)
+        {
+          case 2 :
+                  if ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+                         nodays = 29;
+                  else
+                         nodays = 28;
+                  break;
+          case 4 :
+          case 6 :
+          case 9 :
+          case 11: nodays = 30; break;
+          default:
+
+                   nodays = 31; break;
+       }
+
+       document.getElementById("result").innerHTML = nodays;
+     }
+
+     </script>
+</head>
+<body>
+  <h2>No. of days </h2>
+  Month  : <input type="text" id="month" />
+  Year   : <input type="text" id="year" />
+  <p/>
+  <input type="button" value="Show No. Of Days" onclick="showNodays()" />
+  <p/>
+  <h2 id="result"></h2>
+
+
+</body>
+

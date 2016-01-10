@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>JavaScript Course</title>
+     <script type="text/javascript">
+
+       var visible = true;
+
+       function upperTitle() {
+         var title = document.getElementById("title");
+         title.innerHTML = title.innerHTML.toUpperCase();
+       }
+
+       function showOrHide() {
+                var divs = document.getElementsByTagName("div");
+
+                for(var idx=0; idx < divs.length; idx ++)
+                {
+				   if(visible)
+				       divs[idx].style.visibility="hidden";
+				   else
+				       divs[idx].style.visibility="visible";
+ 		        }
+
+                var btn = document.getElementById("btnShowHide");
+
+                if(visible)
+                {
+                    btn.value="Show All";
+                    visible = false;
+                }
+                else
+                {
+                   btn.value="Hide All";
+                   visible = true;
+                }
+       }
+     </script>
+</head>
+<body>
+  <div id="title">JavaScript</div>
+  <div id="content">JavaScript is a scripting language to make HTML pages more interactive</div>
+  <input type="button" id="btnShowHide" value="Hide All"
+        onclick="showOrHide()" />
+  <input type="button" value="Upper"
+        onclick="upperTitle()" />
+</body>
+

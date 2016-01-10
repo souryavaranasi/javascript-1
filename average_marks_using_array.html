@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Average Marks</title>
+</head>
+<body>
+<h2>Average Marks </h2>
+
+Marks : <input type="text" id="txtMarks"/>
+<input type="button" value="Add"  onclick="addMarks()"/>
+<div id="divMarks"></div>
+<h2 id="average"></h2>
+
+
+ <script>
+      var marks = new Array();  //  global
+      var txtMarks = document.getElementById("txtMarks");
+      var average = document.getElementById("average");
+      var divMarks = document.getElementById("divMarks");
+
+
+      function getTotal(){
+        var total = 0;  // local
+
+	    for (var i in marks)
+	    {
+	        total += marks[i];
+	    }
+	    return total;
+      }
+
+      function addMarks() {
+        if ( isNaN( txtMarks.value) )
+        {
+             divMarks.innerHTML = "Please enter a valid number!";
+             return;
+        }
+        marks.push(parseInt(txtMarks.value));
+        var output = "";
+        var total = 0;
+        for (var i in marks)
+	    {
+	        total += marks[i];
+	        output += marks[i] + "<br/>";
+	    }
+        //var totalmarks = getTotal();
+        divMarks.innerHTML = output;
+        average.innerHTML = total / marks.length;
+      }
+ </script>
+
+</body>
+</html>

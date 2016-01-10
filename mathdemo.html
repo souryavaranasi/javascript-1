@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+
+      var  a = new Array();
+
+      for(var i = 0; i < 10; i ++)
+      {
+          a[i] = Math.round(Math.random() * 100);
+          document.write("<p/>"  + a[i]);
+      }
+
+      //a.sort(); // sorts alphabetical order
+      a.sort( function(a, b){return a-b});  // numeric sort
+
+      document.write("<h3>Sorted Array </h3>");
+      for(var i in a)
+	  {
+	     document.write("<p/>"  + a[i]);
+      }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

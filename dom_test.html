@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>JavaScript Course</title>
+</head>
+<body>
+   <div>Div1</div>
+   <div>Div2</div>
+   <script type="text/javascript">
+     /*
+       document.write( "<p/>" + document.documentElement.nodeName);
+       document.write( "<p/>" +
+         document.documentElement.childNodes.length);
+       var children  = document.documentElement.childNodes;
+     */
+       var div3 = document.createElement("div");
+	   div3.innerHTML="This is Div3";
+       document.body.appendChild(div3);
+
+
+       var divs  = document.getElementsByTagName("div");
+
+       for(var i =0; i < divs.length; i++)
+       {
+          document.write( "<p/>" + divs[i].firstChild.nodeName);
+          document.write( "<p/>" + divs[i].firstChild.nodeValue);
+       }
+
+
+   </script>
+</body>
+</html>
+

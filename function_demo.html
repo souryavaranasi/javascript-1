@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        document.write("Beginning!");
+        document.write("<p/>" + add(10, 20));
+        document.write("<p/>" + add("10", "20"));
+        document.write("<p/>" + mul("10", "20"));
+        document.write("<p/>" + inc(10, 2));
+        document.write("<p/>" + inc(10));
+        document.write("<p/>" + sum(10,20,30,"40"));
+
+        function sum() {
+            var total = 0;
+            // access all arguments
+            for (var i = 0; i < arguments.length ; i++) {
+                total += parseInt(arguments[i]);
+            }
+            return total;
+        }
+
+        function fun(p1,p2,p3) {
+            document.write("Inside Fun");
+        }
+
+        function add(p1, p2) {
+            var n1 = parseInt(p1);
+            var n2 = parseInt(p2);
+            return n1 + n2;
+        }
+
+        function mul(p1, p2) {
+            return p1 * p2;
+        }
+
+        function inc(n1, val) {
+            if(val) // check whether val is present 
+                return n1 + val;
+            else
+                return n1 + 1;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+
+        var item = new Object();
+        item.Name = "iPhone6";
+        item.Price = 45000;
+        item.Qoh = 20;
+
+        //document.write(item.Price + "<p/>");
+        //document.write(item["Price"] + "<p/>");
+        //item["Qoh"] = 10;
+        //document.write(item["Qoh"] + "<p/>");
+
+        item.print = function () {
+            document.write("<p/>" + this.Name);
+            document.write("<p/>" + this.Price);
+            document.write("<p/>" + this.Qoh);
+        };
+
+        item.print(); 
+
+        //var product = { Name : "iphone6", Price: 45000 };
+        //document.write(product.Name + "<p/>");
+
+        //for (var p in product)
+        //    document.write(p + ":"  + product[p] + "<br/>");
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

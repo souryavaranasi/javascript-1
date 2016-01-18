@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function process(event) {
+            alert("Going to google");
+            event.preventDefault(); // cancels default operation i.e. going to URL
+        }
+
+        
+    </script>
+</head>
+<body>
+    <a onclick="process(event)" href="http://www.google.com">Google.Com</a>
+</body>
+</html>

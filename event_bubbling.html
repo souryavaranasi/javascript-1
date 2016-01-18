@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function show1() {
+          alert("Outer DIV")
+        }
+
+        function show2(e) {
+            alert(e);
+            alert("Inner DIV")
+            e.stopPropagation(); // do not bubble event
+        }
+    </script>
+</head>
+<body>
+    <div id="d1" onclick="show1(event)">
+        Outer Div
+        <div id="d2" onclick="show2(event)">
+            Inner DIV
+        </div>
+        This is again outer div
+    </div>
+</body>
+</html>

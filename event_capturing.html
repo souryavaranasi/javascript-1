@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+   
+</head>
+<body>
+    <div id="d1">
+        Outer Div
+        <div id="d2">
+            Inner DIV
+        </div>
+        This is again outer div
+    </div>
+
+    <script>
+
+        var d1 = document.getElementById("d1");
+        d1.addEventListener("click", show1, true); // event capturing 
+
+        var d2 = document.getElementById("d2");
+        d2.addEventListener("click", show2, false); // event bubbling
+
+
+        function show1() {
+            alert("Outer DIV")
+        }
+
+        function show2(e) {
+            alert(e);
+            alert("Inner DIV")
+        }
+    </script>
+
+</body>
+</html>
